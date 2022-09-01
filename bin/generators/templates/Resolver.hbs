@@ -1,0 +1,10 @@
+const {{properCase name}}Resolver = {
+  Mutation: {
+    add{{properCase name}}: async (_, { payload }, { models }) => await models.{{properCase name}}.create(payload),
+  },
+  Query: {
+    get{{properCase name}}s: async (_, __, { models }) => await models.{{properCase name}}.find({}),
+  },
+}
+
+export default {{properCase name}}Resolver

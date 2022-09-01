@@ -1,0 +1,18 @@
+import { model, Schema } from 'mongoose'
+
+const {{properCase name}}Schema = new Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+    },
+  },
+  { timestamps: true }
+)
+
+const {{properCase name}} = model('{{camelCase name}}', {{properCase name}}Schema)
+
+export default {{properCase name}}

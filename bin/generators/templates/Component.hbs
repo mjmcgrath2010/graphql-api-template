@@ -1,0 +1,14 @@
+import { ReactNode } from 'react'
+import { styled } from "../../theme";
+
+export interface {{properCase name}}Props {
+  children: ReactNode | ReactNode[] | string
+}
+
+const {{properCase name}}Wrapper = styled("div", {});
+
+export const {{properCase name}} = (props: {{properCase name}}Props) => (
+  <{{properCase name}}Wrapper {...props}>
+    {props.children}
+  </{{properCase name}}Wrapper>
+)

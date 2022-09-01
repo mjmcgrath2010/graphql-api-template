@@ -1,0 +1,21 @@
+
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+
+import { {{properCase name}} } from '../components/{{properCase name}}';
+
+export default {
+    decorators: [],
+    parameters: {},
+    title: 'Components/{{properCase name}}',
+} as ComponentMeta<typeof {{properCase name}}>
+
+//👇 We create a “template” of how args map to rendering
+const Template: ComponentStory<typeof {{properCase name}}> = (args) => <{{properCase name}} {...args} />;
+
+// 👇 Each story then reuses that template
+export const Primary = Template.bind({});
+Primary.args = {
+    children: 'Example {{properCase name}}'
+};
+
+

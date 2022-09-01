@@ -1,0 +1,41 @@
+type UserName {
+  first: String
+  last: String
+}
+type User {
+  email: String
+  password: String
+  createdAt: Int
+  updatedAt: Int
+  name: UserName
+}
+
+type AuthResponse {
+  token: String
+}
+
+input UserAuthInput {
+  email: String
+  password: String
+}
+
+input UserNameInput {
+  first: String
+  last: String
+}
+
+input NewUserInput {
+  email: String
+  password: String
+  name: UserNameInput
+}
+
+type Mutation {
+  addUser(payload: NewUserInput): AuthResponse
+  login(payload: UserAuthInput): AuthResponse
+}
+
+type Query {
+  getUsers: [User]
+  me: User
+}

@@ -1,0 +1,17 @@
+type {{properCase name}} {
+  name: String
+  description: String
+}
+
+input Create{{properCase name}} {
+  name: String
+  description: String
+}
+
+type Mutation {
+  add{{properCase name}}(payload: Create{{properCase name}}): {{properCase name}}
+}
+
+type Query {
+  get{{properCase name}}s: [{{properCase name}}]
+}
