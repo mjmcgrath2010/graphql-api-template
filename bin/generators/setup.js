@@ -24,7 +24,7 @@ module.exports = function (plop) {
     actions: [
       {
         type: "add",
-        path: "./.env",
+        path: "../../.env",
         templateFile: "./templates/Env.hbs",
       },
     ],
