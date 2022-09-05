@@ -5,7 +5,7 @@ module.exports = function (plop) {
       {
         type: "input",
         name: "mongoUrl",
-        message: "What is the name of the model?",
+        message: "What the name of the mongodb url?",
         default: "mongodb://localhost:27017",
       },
       {
